@@ -2,6 +2,7 @@ const Tourlist = document.getElementById('Tour List');
 const errorMessage = document.getElementById('error-message');
 async function fetchTour() {
     try {
+        //Fetch tour data from the API and display it dynamically.
       const response = await fetch('https://course-api.com/react-tours-project');
       if (!response.ok) {
         throw new Error('Failed to fetch information from the server');
@@ -12,8 +13,9 @@ async function fetchTour() {
     } finally {
       console.log('Fetch operation completed');
     }}
+    //Use the  function to render a list of tours.
     function displayTour(tours) {
-        tickets.forEach(tour => {
+        tickets.map(tour => {
           const { id, name, information, price } = tour;      
 
       const TourElement = document.createElement('div');
