@@ -26,6 +26,12 @@ async function fetchTour() {
         <p>TOUR: ${name}</p>
         <p>Information:${information}</p>
         <p>Price: $${(price)}</p>
+        <p>
+        <button onClick={() => {}}>Read More / Show Less</button>
+        </p>
+        <p>
+        <button onClick={() => removeTour(tour.id)}>Not Interested</button>
+        </p>
       `;
       Tourlist.appendChild(TourElement);
     });
